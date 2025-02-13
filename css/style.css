@@ -1,0 +1,514 @@
+/* Base Styles */
+:root {
+    --primary-color: #ff758c;
+    --secondary-color: #ff7eb3;
+    /* --accent-color: #ff4d6d; */
+    --text-light: #fff;
+    --text-dark: #333;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+    overflow-x: hidden;
+    text-align: center;
+    /* margin: 0;
+    padding: 0;
+    line-height: 1.6; */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* text-align: center; */
+}
+
+/* Header Styles */
+.valentine-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* position: relative;
+    overflow: hidden; */
+}
+
+.header-content {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.animated-heartbeat {
+    animation: heartbeat 1.5s infinite;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.love-photo {
+    width: 300px;
+    height: 300px;
+    margin: 2rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--text-light);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.love-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 5rem 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: var(--text-light);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    margin: 50px 0;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-content {
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    color: var(--text-dark);
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--text-light);
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Promises Section */
+.promises-section {
+    padding: 5rem 0;
+    background: rgba(0,0,0,0.05);
+}
+
+.promises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.promise-card {
+    aspect-ratio: 1;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card-front {
+    background: var(--primary-color);
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    background: var(--secondary-color);
+    transform: rotateY(180deg);
+}
+
+.promise-card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.promise-card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+/* Love Meter */
+.love-meter-section {
+    padding: 5rem 0;
+    background: rgba(255,255,255,0.5);
+}
+
+.love-meter {
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem auto;
+    position: relative;
+    background: var(--text-light);
+}
+
+.meter-bar {
+    height: 100%;
+    transition: width 2s ease;
+    background: var(--primary-color);
+}
+
+/* Quiz Section */
+.quiz-section {
+    padding: 5rem 0;
+    background: #ff7eb3;
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--text-dark);
+}
+
+.option {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    transform: scale(1.05);
+    background: var(--secondary-color);
+}
+
+.correct {
+    background: #4CAF50;
+}
+
+/* Animations */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    from { transform: translateY(100vh) rotate(0deg); }
+    to { transform: translateY(-100vh) rotate(360deg); }
+}
+
+/* Floating Hearts */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    color: var(--primary-color);
+    animation: float 8s linear infinite;
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 30px;
+    }
+
+    .love-photo img {
+        width: 100%;
+    }
+    .animated-heartbeat {
+        font-size: 3rem;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item .timeline-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-item .timeline-content img {
+        width: 100%;
+        height: auto;
+        max-width:400px;
+    }
+}
+/* Love Letter Section */
+.love-letter-section {
+    padding: 5rem 0;
+    perspective: 1000px;
+}
+
+.parchement {
+    background: #fffef2;
+    width: 80%;
+    margin: 0 auto;
+    padding: 4rem;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    transform: rotateY(5deg);
+    transition: transform 0.5s;
+}
+
+.parchement:hover {
+    transform: rotateY(0);
+}
+
+.seal {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 3px solid var(--text-light);
+}
+
+.letter-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #5a4a42;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.signature {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+/* Interactive Album */
+.interactive-album {
+    padding: 5rem 0;
+    background: rgba(255,255,255,0.1);
+}
+
+.album-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.page {
+    flex: 1;
+    padding: 2rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.polaroid {
+    margin: 1rem;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: rotate(-2deg);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.polaroid:hover {
+    transform: rotate(1deg) scale(1.05);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.memory-caption {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    min-height: 2rem;
+}
+
+/* Countdown Timer */
+.countdown-section {
+    padding: 5rem 0;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.countdown-item {
+    background: rgba(255,255,255,0.9);
+    padding: 1.5rem;
+    border-radius: 15px;
+    min-width: 120px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Personalized Message */
+.personalized-section {
+    padding: 5rem 0;
+}
+
+.message-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#partnerName {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    font-size: 1.1rem;
+}
+
+#generateMessage {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#generateMessage:hover {
+    transform: scale(1.05);
+}
+
+.custom-message {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    min-height: 60px;
+    padding: 1rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    color: var(--text-dark);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox img {
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

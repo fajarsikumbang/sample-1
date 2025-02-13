@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Love - Valentine 2024</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts-container" id="hearts"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header Section -->
+        <header class="valentine-header">
+            <div class="header-content">
+                <h1 class="animated-heartbeat">Happy Valentine's Day, My Soulmate! 💖</h1>
+                <div class="love-photo">
+                    <img src="images/couple1.jpg" alt="Our Love">
+                </div>
+                <p class="subtitle">Every Moment With You is Precious</p>
+            </div>
+        </header>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <h2 class="section-title">Our Love Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>First Meeting</h3>
+                        <span class="date">14 Feb 2022</span>
+                        <p>The day our story began...</p>
+                        <div class="timeline-image">
+                            <img src="images/memory1.jpg" alt="First Meeting">
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>First Meeting</h3>
+                        <span class="date">14 Feb 2022</span>
+                        <p>The day our story began...</p>
+                        <div class="timeline-image">
+                            <img src="images/memory1.jpg" alt="First Meeting">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promises Section -->
+        <section class="promises-section">
+            <h2 class="section-title">My Sacred Vows</h2>
+            <div class="promises-grid">
+                <div class="promise-card">
+                    <div class="card-front">
+                        <i class="fas fa-heart"></i>
+                        <h3>Promise #1</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>I will always be your safe haven</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Meter -->
+        <section class="love-meter-section">
+            <div class="love-meter-container">
+                <h2 class="section-title">Our Compatibility Meter</h2>
+                <div class="love-meter">
+                    <div class="meter-bar" style="width: 0%"></div>
+                </div>
+                <p class="result-text">Loading...</p>
+            </div>
+        </section>
+
+        <!-- Love Quiz -->
+        <section class="quiz-section">
+            <h2 class="section-title">Our Love Quiz</h2>
+            <div class="quiz-container">
+                <div class="question active">
+                    <p>Where was our first date?</p>
+                    <div class="options">
+                        <button class="option">Coffee Shop</button>
+                        <button class="option correct">Beach</button>
+                        <button class="option">Park</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memory Gallery -->
+        <section class="gallery-section">
+            <h2 class="section-title">Precious Memories</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/couple2.jpg" alt="Memory 1">
+                    <div class="memory-overlay">
+                        <p>Our First Anniversary</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Love Letter Section -->
+                <section class="love-letter-section">
+                    <div class="parchement">
+                        <div class="ink-content">
+                            <h2 class="section-title">My Eternal Promise</h2>
+                            <div class="seal"></div>
+                            <p class="letter-text">
+                                My Dearest Love,<br><br>
+                                In your eyes, I found my home.<br>
+                                In your heart, I found my purpose.<br>
+                                Through every sunset and sunrise,<br>
+                                I choose you - today, tomorrow, and forever.<br><br>
+                                Yours eternally,<br>
+                                <span class="signature">[Your Name]</span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Interactive Photo Album -->
+                <section class="interactive-album">
+                    <h2 class="section-title">Our Digital Memory Book</h2>
+                    <div class="album-container">
+                        <div class="page left-page">
+                            <div class="polaroid" data-memory="Our First Vacation">
+                                <img src="images/memory2.jpg" alt="Memory 2">
+                            </div>
+                            <div class="polaroid" data-memory="Birthday Celebration">
+                                <img src="images/memory3.jpg" alt="Memory 3">
+                            </div>
+                        </div>
+                        <div class="page right-page">
+                            <div class="polaroid" data-memory="Christmas Together">
+                                <img src="images/memory4.jpg" alt="Memory 4">
+                            </div>
+                            <div class="polaroid" data-memory="Adventure Time">
+                                <img src="images/memory5.jpg" alt="Memory 5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="memory-caption"></div>
+                </section>
+        
+                <!-- Couple Countdown Timer -->
+                <section class="countdown-section">
+                    <h2 class="section-title">Our Next Milestone</h2>
+                    <div class="countdown-container">
+                        <div class="countdown-item">
+                            <span class="number" id="days">00</span>
+                            <span class="label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="hours">00</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="minutes">00</span>
+                            <span class="label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="seconds">00</span>
+                            <span class="label">Seconds</span>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Personalized Message Section -->
+                <section class="personalized-section">
+                    <h2 class="section-title">Custom Love Note</h2>
+                    <div class="message-container">
+                        <input type="text" id="partnerName" placeholder="Enter your partner's name">
+                        <button id="generateMessage">Create Magic</button>
+                        <div class="custom-message"></div>
+                    </div>
+                </section>
+
+        <!-- Footer -->
+        <footer class="valentine-footer">
+            <p>Created with 💖 by Your Eternal Love</p>
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Audio Player -->
+    <audio id="love-song" loop>
+        <source src="assets/our-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
